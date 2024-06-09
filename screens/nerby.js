@@ -59,7 +59,7 @@ const Nerby = ({ navigation }) => {
       id: 1,
       nama: "Tambal ban jetis kulon",
       tipe: "Bengkel motor",
-      alamat: "Jl bareng cuma temen",
+      alamat: "Jl. ngagel",
       jam: "08.00 - 21.00",
       harga: "Rp 50.000"
     },
