@@ -53,44 +53,57 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel motor",
       alamat: "Jl. rungkut",
       jam: "08.00 - 21.00",
+      harga: "Rp 50.000"
     },
     {
       id: 1,
       nama: "Tambal ban jetis kulon",
       tipe: "Bengkel motor",
       alamat: "Jl bareng cuma temen",
+      jam: "08.00 - 21.00",
+      harga: "Rp 50.000"
     },
     {
       id: 2,
       nama: "Tambal ban mas bro",
       tipe: "Bengkel motor",
       alamat: "Jl bareng cuma temen",
+      jam: "08.00 - 21.00",
+      harga: "Rp 50.000"
     },
     {
       id: 3,
       nama: "Tambal ban sis",
       tipe: "Bengkel mobil",
       alamat: "Jl bareng cuma temen",
+      jam: "08.00 - 21.00",
+      harga: "Rp 100.000"
     },
     {
       id: 4,
       nama: "Tambal ban pak dono",
       tipe: "Bengkel mobil",
       alamat: "Jl bareng cuma temen",
+      jam: "08.00 - 21.00",
+      harga: "Rp 100.000"
     },
     {
       id: 5,
       nama: "Tambal ban banjaya",
       tipe: "Bengkel motor",
       alamat: "Jl bareng cuma temen",
+      jam: "08.00 - 21.00",
+      harga: "Rp 50.000"
     },
     {
       id: 6,
       nama: "Tambal ban barokah",
       tipe: "Bengkel motor",
       alamat: "Jl bareng cuma temen",
+      jam: "08.00 - 21.00",
+      harga: "Rp 50.000"
     },
-  ];
+];
 
   const renderItem = ({ item, index }) => {
     return (
