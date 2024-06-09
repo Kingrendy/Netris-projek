@@ -67,7 +67,7 @@ const Nerby = ({ navigation }) => {
       id: 2,
       nama: "Tambal ban mas bro",
       tipe: "Bengkel motor",
-      alamat: "Jl bareng cuma temen",
+      alamat: "Jl. ketintang",
       jam: "08.00 - 21.00",
       harga: "Rp 50.000"
     },
@@ -75,7 +75,7 @@ const Nerby = ({ navigation }) => {
       id: 3,
       nama: "Tambal ban sis",
       tipe: "Bengkel mobil",
-      alamat: "Jl bareng cuma temen",
+      alamat: "Jl. wonokromo",
       jam: "08.00 - 21.00",
       harga: "Rp 100.000"
     },
@@ -83,7 +83,7 @@ const Nerby = ({ navigation }) => {
       id: 4,
       nama: "Tambal ban pak dono",
       tipe: "Bengkel mobil",
-      alamat: "Jl bareng cuma temen",
+      alamat: "Jl. jagir",
       jam: "08.00 - 21.00",
       harga: "Rp 100.000"
     },
@@ -91,7 +91,7 @@ const Nerby = ({ navigation }) => {
       id: 5,
       nama: "Tambal ban banjaya",
       tipe: "Bengkel motor",
-      alamat: "Jl bareng cuma temen",
+      alamat: "Jl.bratang",
       jam: "08.00 - 21.00",
       harga: "Rp 50.000"
     },
@@ -99,7 +99,7 @@ const Nerby = ({ navigation }) => {
       id: 6,
       nama: "Tambal ban barokah",
       tipe: "Bengkel motor",
-      alamat: "Jl bareng cuma temen",
+      alamat: "Jl. nias",
       jam: "08.00 - 21.00",
       harga: "Rp 50.000"
     },
