@@ -51,7 +51,7 @@ const Nerby = ({ navigation }) => {
       id: 0,
       nama: "Tambal ban cak imin",
       tipe: "Bengkel motor",
-      alamat: "Jl bareng cuma temen",
+      alamat: "Jl. rungkut",
       jam: "08.00 - 21.00",
     },
     {
