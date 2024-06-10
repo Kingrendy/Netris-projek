@@ -41,7 +41,7 @@ const Nerby = ({ navigation }) => {
       }
     };
     fetchCurrentLocation();
-  });
+  }, []); // Make sure to add empty dependency array to run the effect only once on mount
 
   const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
@@ -53,7 +53,7 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel motor",
       alamat: "Jl. rungkut",
       jam: "08.00 - 21.00",
-      harga: "Rp 50.000"
+      harga: "Rp 50.000",
     },
     {
       id: 1,
@@ -61,7 +61,7 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel motor",
       alamat: "Jl. ngagel",
       jam: "08.00 - 21.00",
-      harga: "Rp 50.000"
+      harga: "Rp 50.000",
     },
     {
       id: 2,
@@ -69,7 +69,7 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel motor",
       alamat: "Jl. ketintang",
       jam: "08.00 - 21.00",
-      harga: "Rp 50.000"
+      harga: "Rp 50.000",
     },
     {
       id: 3,
@@ -77,7 +77,7 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel mobil",
       alamat: "Jl. wonokromo",
       jam: "08.00 - 21.00",
-      harga: "Rp 100.000"
+      harga: "Rp 100.000",
     },
     {
       id: 4,
@@ -85,7 +85,7 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel mobil",
       alamat: "Jl. jagir",
       jam: "08.00 - 21.00",
-      harga: "Rp 100.000"
+      harga: "Rp 100.000",
     },
     {
       id: 5,
@@ -93,7 +93,7 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel motor",
       alamat: "Jl.bratang",
       jam: "08.00 - 21.00",
-      harga: "Rp 50.000"
+      harga: "Rp 50.000",
     },
     {
       id: 6,
@@ -101,9 +101,9 @@ const Nerby = ({ navigation }) => {
       tipe: "Bengkel motor",
       alamat: "Jl. nias",
       jam: "08.00 - 21.00",
-      harga: "Rp 50.000"
+      harga: "Rp 50.000",
     },
-];
+  ];
 
   const renderItem = ({ item, index }) => {
     return (
@@ -112,7 +112,7 @@ const Nerby = ({ navigation }) => {
           setChooseItem(item.id);
         }}
         style={{
-          height: windowHeight * 0.22,
+          height: windowHeight * 0.3, // Adjusted height to accommodate new text elements
           width: windowWidth * 0.8,
           borderRadius: 10,
           backgroundColor: index === chooseItem ? "#DCCDE5" : "#FFFFFF",
@@ -133,7 +133,7 @@ const Nerby = ({ navigation }) => {
             source={require("../assets/tambalBan.jpg")}
           />
         </View>
-        <View style={{ flex: 1.3, paddingLeft: 10, justifyContent: "center" }}>
+        <View style={{ flex: 1.5, paddingLeft: 10, justifyContent: "center" }}>
           <Text
             style={{
               fontFamily: "Inter_700Bold",
@@ -148,7 +148,6 @@ const Nerby = ({ navigation }) => {
             style={{
               fontFamily: "Inter_400Regular",
               fontSize: 12,
-              // color: "#774494",
             }}
           >
             {item.tipe}
@@ -158,10 +157,27 @@ const Nerby = ({ navigation }) => {
             style={{
               fontFamily: "Inter_400Regular",
               fontSize: 12,
-              // color: "#774494",
             }}
           >
             {item.alamat}
+          </Text>
+          <Separator h={3} />
+          <Text
+            style={{
+              fontFamily: "Inter_400Regular",
+              fontSize: 12,
+            }}
+          >
+            Jam: {item.jam}
+          </Text>
+          <Separator h={3} />
+          <Text
+            style={{
+              fontFamily: "Inter_400Regular",
+              fontSize: 12,
+            }}
+          >
+            Harga: {item.harga}
           </Text>
         </View>
       </TouchableOpacity>
@@ -189,7 +205,7 @@ const Nerby = ({ navigation }) => {
         <FlatList
           data={listTambalBan}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.id.toString()}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
         />

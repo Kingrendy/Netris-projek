@@ -20,6 +20,8 @@ import React, { useRef, useState, useEffect } from "react";
 import Carousel, { ParallaxImage } from "react-native-snap-carousel";
 import MapView, { Marker } from "react-native-maps";
 import * as Location from "expo-location";
+import { useNavigation } from "@react-navigation/native";
+import DetailBerita from "./DetailBerita";
 
 const ENTRIES1 = [
   {
@@ -111,6 +113,8 @@ const Home = ({ navigation }) => {
   const [entries, setEntries] = useState([]);
   const carouselRef = useRef(null);
   const [currentLocation, setCurrentLocation] = useState(null);
+  
+  
 
   const goForward = () => {
     carouselRef.current.snapToNext();
@@ -143,7 +147,7 @@ const Home = ({ navigation }) => {
       id: 0,
       judul: "Pentingnya performa ban untuk berkendara",
       subJudul: "Performa buruk berbahaya",
-      img: "https://i.ibb.co/mS5z6YM/ban.jpg",
+      img: "https://assets.konten1.png",
     },
     {
       id: 1,
@@ -158,6 +162,10 @@ const Home = ({ navigation }) => {
       img: "https://www.wahanahonda.com/assets/upload/berita/BERITA_1612703202_f313da56f339b5fb48dda003e147fb92.jpg",
     },
   ];
+
+  const handleDetailPress = (itemId) => {
+    navigation.navigate('DetailBerita', { itemId });
+  };
 
   const renderItem = ({ item, index }, parallaxProps) => {
     return (
@@ -242,7 +250,9 @@ const Home = ({ navigation }) => {
                   borderRadius: 10,
                 }}
               >
-                <Text style={{ color: "white" }}>lebih</Text>
+                <TouchableOpacity onPress={DetailBerita}>
+                <Text style={{ color: "white" }}>Detail</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
